@@ -1,10 +1,36 @@
 body {
     text-align: center;
+    font-family: Open Sans, Arial;
+    background-color: #333333;
+    color:white;
+}
 
+#caption {
+    position: absolute;
+    top: 50px;
+    left:0;
+    right:0;
+    margin: auto;
+    font-family: 'Pacifico';
+    font-size: 5em;
 }
 
 #control {
     margin-top: 200px;
+}
+
+span {
+    font-size: 32px;
+    margin: 0 10px;
+}
+
+button {
+    font-size: 1.5em;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    cursor: pointer;
 }
 
 #break, #session {
@@ -12,7 +38,7 @@ body {
     margin: 0 30px;
 }
 
-#display {
+#display, #overlay {
     display: inline-block;
     margin: 50px;
     height: 300px;
@@ -21,14 +47,37 @@ body {
     border-radius: 50%;
     font-size: 4em;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#overlay{
+    height: 292px;
+    width: 292px;
+    border: 4px solid #333333;
+    margin: 0;
+    font-size: 1em;
 }
 
 #display-title {
     font-family:Open Sans, Arial;
     font-size: 0.8em;
+    z-index: 5;
+    position: relative;
     margin-top: 40px;
 }
 
 #display-minute {
+    position: relative;
+    z-index: 5;
     margin-top: 50px;
+}
+
+#background{
+    background-color: #99CC00;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 300px;
+    z-index: 1;
 }
